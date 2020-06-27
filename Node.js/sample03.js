@@ -1,28 +1,20 @@
 const http = require('http');
 const server = http.createServer();
-const fs = require('fs');
-const qs = require('querystring');
-const ejs = require('ejs');
 
-const index = fs.readFileSync('sample03.ejs', 'UTF-8');
+const qs = require('querystring');
 
 // import
 const service = require('./lib/service');
 
 server.on('request', function (req, res) {
+
+    // fileCheck
+    const text = service.fileCheck();
+
     switch (req.method) {
         case 'GET':
             if (req.url === "/") {
-
-                try {
-                    // 存在チェック
-                    fs.statSync("input.txt");
-                } catch (err) {
-                    // 新規作成
-                    fs.writeFileSync("input.txt", "");
-                }
-
-                var data = service.readFile(fs, index);
+                var data = service.readFile(text);
 
                 res.writeHead(200, { 'Content-Type': 'text/html' });
                 res.write(data);
@@ -36,12 +28,8 @@ server.on('request', function (req, res) {
                 inputData += chunk;
                 values = qs.parse(inputData);
             }).on('end', function () {
-                var text = fs.readFileSync("input.txt", 'UTF-8');
-                var data = ejs.render(index, {
-                    text: text.split(',')
-                });
-             
-                service.write(values, fs);
+
+                data = service.write(values, text);
 
                 res.writeHead(302, { 'Location': '/' });
                 res.write(data);
