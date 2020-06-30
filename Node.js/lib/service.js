@@ -1,6 +1,7 @@
 const ejs = require('ejs');
 const fs = require('fs');
 const index = fs.readFileSync('sample03.ejs', 'UTF-8');
+const js = fs.readFileSync('lib/frontService03.js', 'UTF-8');
 
 // fileCheck
 function fileCheck() {
@@ -26,8 +27,8 @@ function write(values, text) {
         var str = [];
         var rowNo = text.split(',').length;
         var name = values.name;
-        var number = values.undefinednumber;
-        str.push("rowNo:" + rowNo + "Name:" + name + "Number:" + number + ",\n");
+        var number = values.number;
+        str.push("rowNo:" + rowNo + "Name:" + name + "Number:" + number + ",");
         // 書き込み
         fs.appendFileSync("input.txt", str);
     }
@@ -56,6 +57,19 @@ function readFile(text) {
     return data;
 }
 
+// delete
+function deleteWrite(text, values) {
+    var data = text.split(',')
+    for (var i = 0; i < values.select.length; i++) {
+        data.splice(values.select[i] - 1, 1);
+    }
+    console.log(data);
+
+    // 上書き
+    fs.writeFileSync("input.txt", data);
+    return postRender(text);
+}
+
 // 初期表示のRender
 function getRender(text) {
     console.log("getRender");
@@ -74,8 +88,17 @@ function postRender(text) {
     return data;
 }
 
+function jsRender() {
+    console.log("js");
+    var data = ejs.render(js, {
+    });
+    return data;
+}
+
 module.exports = {
     fileCheck,
     write,
-    readFile
+    deleteWrite,
+    readFile,
+    jsRender
 };

@@ -31,7 +31,11 @@ service03.jsに処理を記述
 テキストファイルを新規作成、追記、読み込み  
 POSTで送られた値を保存できるように  
 service.jsにGet時とPost時の処理を記述  
-削除更新用のrowNo追加  
+削除更新用のrowNo追加
+jsファイル読み込み  
+削除用ボタン追加
+一件削除対応
+
 
 ## Author
 Takushi Tokuyama
