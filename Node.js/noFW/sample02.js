@@ -32,7 +32,7 @@ server.on('request', function (req, res) {
                     res.end();
                     break;
 
-                case "/syori02.js":
+                case "/frontService02.js":
                     res.writeHead(200, { 'Content-Type': 'text/js' });
                     res.write(js);
                     res.end();

@@ -1,8 +1,0 @@
-Name:あああNumber:1,
-Name:あああNumber:1,
-Name:Number:1,
-Name:あああNumber:1,
-Name:あああNumber:,
-Name:Number:1,
-Name:Number:1,
-Name:あああNumber:1,

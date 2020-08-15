@@ -10,6 +10,7 @@
 
 <body>
     <form action="/" method="POST">
+        <input type="hidden" name="hidden" />
         <div>
             <label for="number">Number:</label>
             <input id="number" type="text" name="number" />
@@ -22,13 +23,16 @@
             <input id="posting" type="submit" value="送信" />
         </div>
     </form>
-    <ul><% if(text.length != 0){%>
+    <form id="delete" name="post_delete" action="/delete" method="POST" />
+    <button type="button" id="deleteBtn">削除</button>
+
+    <ul id="list"><% if(text.length != 0){%>
         <% text.forEach(function (item){ %>
         <li><%= item %></li>
         <% }); %>
         <% } %>
-
     </ul>
+    <script src="lib/frontService03.js"></script>
 </body>
 
 </html>
