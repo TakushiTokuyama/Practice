@@ -11,18 +11,19 @@ class Header extends React.Component {
 }
 
 class Hero extends React.Component {
-    render() {
-        var images = [
-            { image: `${process.env.PUBLIC_URL}/images/hero_tomato_big.png` },
-            { image: `${process.env.PUBLIC_URL}/images/hero_tomato_small.png` }
-        ];
 
+    state = [
+        { tomato_red: `${process.env.PUBLIC_URL}/images/hero_tomato_big.png` },
+        { tomato_green: `${process.env.PUBLIC_URL}/images/hero_tomato_small.png` }
+    ];
+
+    render() {
         var count = 0;
         setInterval(function () {
             console.log("bS");
             count++;
             if (count < 5) {
-                document.getElementById('image').src = `${process.env.PUBLIC_URL}/images/hero_tomato_big.png`;
+                document.getElementById('image').src = this.state.tomato_red;
             }
             else if (count > 5 && count < 9) {
 
@@ -35,8 +36,8 @@ class Hero extends React.Component {
 
         return (
             <div class="resizeimage">
-                <img id="image" class="big_image" src={images[0].image} alt="hero_tomato_big" />
-                <img class="small_image" src={images[1].image} alt="hero_tomato_small" />
+                <img id="image" class="big_image" src={this.state.tomato_red} alt="hero_tomato_big" />
+                <img class="small_image" src={this.state.tomato_red} alt="hero_tomato_small" />
             </div>
         );
     }
