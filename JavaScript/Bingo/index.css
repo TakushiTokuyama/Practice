@@ -17,6 +17,14 @@
   display: flex;
 }
 
+.square_free{
+  height:100px;
+  width:100px;
+  border : solid 1px black;
+  display: inline-block;
+  font-size: 40px;
+}
+
 .square{
   height:100px;
   width:100px;
