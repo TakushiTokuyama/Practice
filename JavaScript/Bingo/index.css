@@ -8,9 +8,14 @@
   transition: .4s;
 }
 
-.start_button{
-   background: #67c5ff;
-   color: white;
+.reset_button{
+   display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #bb1c1c;
+  border: solid 2px #d3362b;
+  border-radius: 3px;
+  transition: .4s;
 }
 
 .square_flex{
