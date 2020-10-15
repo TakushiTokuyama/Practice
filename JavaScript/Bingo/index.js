@@ -3,6 +3,7 @@ var rouletteStart = document.getElementById('rouletteStart');
 var roulettReset = document.getElementById('roulettReset');
 var rouletteResult = document.getElementById('rouletteResult');
 var message = document.getElementById('message');
+var numberOfRemaining = document.getElementById('numberOfRemaining');
 var numbers = [];
 var checkNumbers = [[], [], [], [], []];
 var checker = 0;
@@ -15,6 +16,8 @@ window.onload = function () {
     InsertRandomNumber();
     // 真ん中はFREEマス
     checkNumbers[2][2] = 1;
+    // 初期値
+    numberOfRemaining.innerHTML = '残り:' + 50;
 };
 
 // ビンゴカードに数値1-50をランダムに配置
@@ -57,6 +60,13 @@ rouletteStart.addEventListener('click', function () {
             changeColor(numbers);
             countUp++;
         }
+        numberOfRemaining.innerHTML = `残り:${50 - numbers.length}`;
+
+        var result = document.getElementById('result');
+        var span = document.createElement('span');
+        span.innerHTML = numbers.length;
+        span.classList = 'circle';
+        result.appendChild(span);
     }
 });
 
@@ -131,3 +141,4 @@ function resultProcess(checker) {
         rouletteStart.innerHTML = 'BINGO!!';
     }
 }
+
