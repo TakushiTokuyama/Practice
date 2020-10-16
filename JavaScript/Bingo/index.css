@@ -9,13 +9,43 @@
 }
 
 .reset_button{
-   display: inline-block;
+  display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
   color: #bb1c1c;
   border: solid 2px #d3362b;
   border-radius: 3px;
   transition: .4s;
+}
+
+.counter_and_button_line{
+  display: flex;
+  padding:30px;
+}
+
+.button_line{
+  flex-grow: 1;
+  margin-right: 150px;
+}
+
+.counter{
+  flex-grow: 1;
+}
+
+.container{
+  display: flex;
+}
+
+.contents_left{
+  flex-grow: 1;
+}
+
+.contents_right{
+  flex-grow: 1;
+}
+
+.parent_square{
+  padding: 30px;
 }
 
 .square_flex{
@@ -26,7 +56,9 @@
   height:100px;
   width:100px;
   border : solid 1px black;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   font-size: 40px;
 }
 
@@ -52,5 +84,36 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+
+  animation-name: ball_move;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ball_move {
+    0% {
+        transform: translate(-300px, 200px);
+    }
+    100% {
+        transform: translate(-300px, 200px);
+    }
+}
+
+.message{
+  padding: 50px;
+  animation-name: message_move;
+  animation-duration:10s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes message_move {
+    0% {
+        transform: translate(-300px, -200px);
+    }
+    100% {
+      font-size: 100px;
+      transform: translate(-200px, -150px);
+      color: tomato;
+    }
 }

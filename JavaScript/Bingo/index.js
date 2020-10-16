@@ -56,17 +56,15 @@ rouletteStart.addEventListener('click', function () {
             continue;
         } else {
             numbers.push(num);
-            rouletteResult.innerHTML = numbers;
             changeColor(numbers);
             countUp++;
         }
         numberOfRemaining.innerHTML = `残り:${50 - numbers.length}`;
 
-        var result = document.getElementById('result');
         var span = document.createElement('span');
-        span.innerHTML = numbers.length;
+        span.innerHTML = numbers[numbers.length - 1];
         span.classList = 'circle';
-        result.appendChild(span);
+        rouletteResult.appendChild(span);
     }
 });
 

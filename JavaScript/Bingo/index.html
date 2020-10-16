@@ -9,56 +9,62 @@
 </head>
 
 <body>
-    <div id="numberOfRemaining"></div>
-    <div>
-        <button id="rouletteStart" class="start_button">スタート</button>
-    </div>
+    <div class="container">
+        <div class="contents_left">
+            <div class="counter_and_button_line">
+                <div class="counter">
+                    <div id="numberOfRemaining"></div>
+                </div>
+                <div class="button_line">
+                    <button id="rouletteStart" class="start_button">スタート</button>
+                    <button id="roulettReset" class="reset_button">リセット</button>
+                </div>
+            </div>
 
-    <div>
-        <button id="roulettReset" class="reset_button">リセット</button>
-    </div>
+            <div id="parentSquare" class="parent_square">
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square_free">FREE</div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+        </div>
 
-    <div id="parentSquare">
-        <div class="square_flex">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        <div class="square_flex">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        <div class="square_flex">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square_free">FREE</div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        <div class="square_flex">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        <div class="square_flex">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
+        <div class="contents_right">
+            <div id="rouletteResult" class="circle_line"></div>
+            <div id="message" class="message"></div>
         </div>
     </div>
-
-    <div id="rouletteResult"></div>
-    <div id="result" class="circle_line"></div>
-    <div id="message"></div>
 
     <script src="index.js"></script>
 </body>
