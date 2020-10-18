@@ -1,15 +1,20 @@
-var parentSquare = document.getElementById('parentSquare');
-var rouletteStart = document.getElementById('rouletteStart');
-var roulettReset = document.getElementById('roulettReset');
-var rouletteResult = document.getElementById('rouletteResult');
-var message = document.getElementById('message');
-var numberOfRemaining = document.getElementById('numberOfRemaining');
-var numbers = [];
-var checkNumbers = [[], [], [], [], []];
-var checker = 0;
-var insertNums = [];
+'use strict'
 
-var count = 0;
+const parentSquare = document.getElementById('parentSquare');
+const rouletteStart = document.getElementById('rouletteStart');
+const roulettReset = document.getElementById('roulettReset');
+const rouletteResult = document.getElementById('rouletteResult');
+const message01 = document.getElementById('message01');
+const message02 = document.getElementById('message02');
+const message03 = document.getElementById('message03');
+const numberOfRemaining = document.getElementById('numberOfRemaining');
+let numbers = [];
+let checkNumbers = [[], [], [], [], []];
+let checker = 0;
+let insertNums = [];
+const colors = ['red', 'blue', 'green', 'orange', 'black', 'fuchsia', 'maroon', 'gray', 'lime', 'purple'];
+
+let count = 0;
 
 // 初期表示
 window.onload = function () {
@@ -61,12 +66,20 @@ rouletteStart.addEventListener('click', function () {
         }
         numberOfRemaining.innerHTML = `残り:${50 - numbers.length}`;
 
-        var span = document.createElement('span');
-        span.innerHTML = numbers[numbers.length - 1];
-        span.classList = 'circle';
-        rouletteResult.appendChild(span);
+        // ビンゴの玉を生成
+        insertCircle(numbers);
     }
 });
+
+// ビンゴの玉を生成
+function insertCircle(numbers) {
+    var span = document.createElement('span');
+    span.innerHTML = numbers[numbers.length - 1];
+    span.classList = 'circle';
+    span.style.color = 'white';
+    span.style.backgroundColor = colors[Math.round(Math.random() * 9)];
+    rouletteResult.appendChild(span);
+}
 
 // 同じ数値のマスの色を変える
 function changeColor(numbers) {
@@ -134,9 +147,11 @@ function checkDiagonal() {
 // 結果処理
 function resultProcess(checker) {
     if (checker === 5) {
-        message.innerHTML = 'BINGO!!';
+        message01.classList = 'message01';
+        message03.classList = 'message01';
+        message02.innerHTML = 'BINGO!!';
+        message02.classList = 'message02';
         rouletteStart.setAttribute('disabled', true);
-        rouletteStart.innerHTML = 'BINGO!!';
     }
 }
 
