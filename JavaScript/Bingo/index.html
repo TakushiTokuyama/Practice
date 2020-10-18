@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/index.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="font_red">BingoGame</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_title">★ BINGO GAME ★</div>
+    </header>
+    <div class="container">
+        <div class="contents_left">
+            <div class="counter_and_button_line">
+                <div class="counter">
+                    <div id="numberOfRemaining"></div>
+                </div>
+                <div class="button_line">
+                    <button id="rouletteStart" class="start_button">スタート</button>
+                    <button id="roulettReset" class="reset_button">リセット</button>
+                </div>
+            </div>
+
+            <div id="parentSquare" class="parent_square">
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square_free">FREE</div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="square_flex">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contents_right">
+            <div class="message_block">
+                <div id="message01"></div>
+                <div id="message02"></div>
+                <div id="message03"></div>
+            </div>
+            <div class="rouletResult_block">
+                <div id="rouletteResult" class="circle_line"></div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
