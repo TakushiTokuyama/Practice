@@ -74,10 +74,12 @@ header{
 
 .contents_left{
   flex-grow: 1;
+  width: 40%;
 }
 
 .contents_right{
   flex-grow: 1;
+  width: 60%;
 }
 
 .parent_square{
