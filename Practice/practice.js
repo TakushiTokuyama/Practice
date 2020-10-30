@@ -112,3 +112,37 @@
 // }
 
 // console.log(findPostsId(posts, 3));
+
+// var drinks = [
+//     { name: 'りんご', prices: 100, producer: 'A' },
+//     { name: 'みかん', prices: 50, producer: 'A' },
+//     { name: 'いちご', prices: 100, producer: 'A' },
+//     { name: 'りんご', prices: 120, producer: 'B' },
+//     { name: 'みかん', prices: 30, producer: 'B' },
+//     { name: 'いちご', prices: 120, producer: 'B' },
+// ];
+
+// var FindAllPriceOverHundred = drinks.every(function (drink) {
+//     return drink.prices > 100;
+// });
+
+// console.log(FindAllPriceOverHundred);
+
+// var FindAllPriceSomeOverHundred = drinks.some(function (drink) {
+//     return drink.prices;
+// });
+
+// console.log(FindAllPriceSomeOverHundred);
+
+// function getNowYear() {
+//     const year = new Date().getFullYear();
+//     return `今年は${year}`;
+// }
+
+// console.log(getNowYear());
+
+function User(id) {
+    this.id = id;
+}
+
+console.log(new User(1));
