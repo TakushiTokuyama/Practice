@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sample01</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <p>CheckBoxSample</p>
+
+    <div>
+        <p style="display:inline">購入数：</p>
+        <label style="color:red" for="redZaiko">赤い靴</label>
+        <input id="redZaiko" size="1" id="order" type="text" name="orders" value="0">
+        <label style="color:blue" for="blueZaiko">青いサンダル</label>
+        <input id="blueZaiko" size="1" id="order" type="text" name="orders" value="0">
+        <label style="color:green" for="greenZaiko">緑の長靴</label>
+        <input id="greenZaiko" size="1" id="order" type="text" name="orders" value="0">
+
+    </div>
+
+    <div>
+        <p style="display:inline">消費税：</p>
+        <input id="eightPercent" type="radio" name="syouhizei" value="1.08">
+        <label for="eightPercent">8%</label>
+        <input id="tenPercent" type="radio" name="syouhizei" value="1.10" checked=true>
+        <label for="tenPercent">10%</label>
+    </div>
+
+    <div>
+        <p style="display:inline">商品名：</p>
+        <input id="red" type="checkbox" name="items" value="赤い靴">
+        <label style="color:red" for="red">赤い靴:150yen</label>
+
+        <input id="blue" type="checkbox" name="items" value="青いサンダル">
+        <label style="color:blue" for="bule">青いサンダル:200yen</label>
+
+        <input id="green" type="checkbox" name="items" value="緑色の長靴">
+        <label style="color:green " for="green">緑色の長靴:250yen</label>
+
+        <p style="display:inline">種類</p>
+        <select name="optionType">
+            <optgroup label="Option">
+                <option value="bousui">防水</option>
+                <option value="stop">滑り止め</option>
+                <option value="deep">厚底</option>
+            </optgroup>
+        </select>
+
+        <input type="submit" onclick="accounting();" value="送信" />
+        <input type="submit" onclick="allSelect();" value="全選択" />
+        <input type="submit" onclick="allUnSelect()" value="全解除" />
+        <button type="button" onclick="end()">終了</button>
+    </div>
+
+    <p>商品名：<span id="show1"></span></p>
+    <p>個数：<span id="show2"></span></p>
+    <p>合計：<span id="show3"></span></p>
+    <script src="sample01.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML について</title>
+    <link rel="stylesheet" href="sample08.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents">
+            <p class="title-size">あなたのいいところは？</p>
+            <p>診断したい名前を入れてください</p>
+            <div>
+                <input id="good" class="input-form" type="text" name="goodPoint" />
+                <input class="submit-button" type="submit" onclick="diagnogis()" value="診断する" />
+            </div>
+            <div>
+                <p id="resultTitle" class="title-size"></p>
+                <p id="comment"></p>
+                <p id="tw-button"></p>
+            </div>
+        </div>
+    </div>
+    <script src="sample08.js"></script>
+</body>
+
+
+</html>
