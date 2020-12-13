@@ -3,7 +3,7 @@ var randomNumber = document.getElementById('randomNumber');
 var count = 3;
 var timer;
 
-// 1000ミリ秒ごとに繰り返す
+// 2000ミリ秒ごとに繰り返す
 var countDownTimer = () => {
     timer = setInterval(function () { NumberLow() }, 2000);
 }
@@ -25,3 +25,4 @@ var addRandomNumber = () => {
 }
 
 countDownTimer();
+

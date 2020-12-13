@@ -141,8 +141,70 @@
 
 // console.log(getNowYear());
 
-function User(id) {
-    this.id = id;
-}
+// var datas = [
+//     { id: 1, name: "a", age: 20 },
+//     { id: 2, name: "b", age: 20 },
+//     { id: 3, name: "c", age: 21 }
+// ];
 
-console.log(new User(1));
+// var resultData = datas.filter(function (data) {
+//     return data.age === 20;
+// });
+
+// resultData.forEach(function (data) {
+//     console.log(data);
+// });
+
+
+// var datas = [
+//     { id: "1", value: "a" },
+//     { id: "3", value: "c" },
+//     { id: "4", value: "c" }
+// ];
+
+// var datas = [
+//     { id: "1", value: "a" },
+// ];
+
+// var result = [];
+// function findFirstValueC() {
+//     datas.forEach(function (data) {
+//         if (data.value === 'c') {
+//             result.push(data);
+//         }
+//     });
+//     if (result.length != 0) {
+//         return result[0];
+//     } else {
+//         return undefined;
+//     }
+// }
+
+// console.log(findFirstValueC());
+
+// var datas = [
+//     { a: 1, b: 2, c: 3 }
+// ]
+
+// var result = datas.map(function (data) {
+//     return { 1: "a", 2: "b", 3: "c" }
+// });
+
+// console.log(result);
+
+// var datas = {
+//     1: { id: 1, name: "a" },
+//     2: { id: 1, name: "b" },
+//     ids: [1, 2]
+// }
+
+var datas = [{ id: 1, name: "a" }, { id: 1, name: "b" }];
+
+var result = {};
+
+result[1] = datas[0];
+result[2] = datas[1];
+result[2]['id'] = 2;
+result['ids'] = [1, 2];
+
+console.log(result);
