@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <div>
+        <label>src-url</label>
+            <input id="setImage" type="text" name="image" value="https://pbs.twimg.com/profile_images/3450688810/431c3ed2b8fa4508a0ee80219279f63f_400x400.jpeg">
+            <button id="set">Set</button>
+    </div>
+        
+    </diV>
+    <script>
+        const image = document.getElementById('setImage');
+        
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        
+        const img = new Image();
+
+        img.src = "";
+
+        img.onload = () => {
+            ctx.drawImage(img, 0 ,0);
+            ctx.fillText("Cat",100,100);
+        }
+
+        document.getElementById('set').addEventListener('click', function () {
+                img.src = image.innerHTML;
+                console.log(img + "click");
+            });
+
+    </script>
+</body>
+</html>
