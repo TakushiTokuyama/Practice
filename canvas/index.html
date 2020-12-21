@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <canvas id="canvas" width="400" height="400"></canvas>
 
     <div>
-        <label>src-url</label>
-            <input id="setImage" type="text" name="image" value="https://pbs.twimg.com/profile_images/3450688810/431c3ed2b8fa4508a0ee80219279f63f_400x400.jpeg">
+        <div>
+            image-url<input id="image" type="text" name="image"
+                value="https://pbs.twimg.com/profile_images/3450688810/431c3ed2b8fa4508a0ee80219279f63f_400x400.jpeg">
+        </div>
+        <div>
+            x<input id="x" type="text" name="x" />
+        </div>
+        <div>
+            y<input id="y" type="text" name="y" />
+        </div>
+        <div>
+            text<input id="text" type="text" name="text" />
+        </div>
+        <div>
+            font<input id="font" type="text" name="font" />
+        </div>
+        <div>
             <button id="set">Set</button>
+        </div>
     </div>
-        
+
     </diV>
     <script>
-        const image = document.getElementById('setImage');
-        
+
+        const image = document.getElementById('image');
+        const x = document.getElementById('x');
+        const y = document.getElementById('y');
+        const text = document.getElementById('text');
+        const font = document.getElementById('font');
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
-        
+
         const img = new Image();
 
-        img.src = "";
-
-        img.onload = () => {
-            ctx.drawImage(img, 0 ,0);
-            ctx.fillText("Cat",100,100);
-        }
-
         document.getElementById('set').addEventListener('click', function () {
-                img.src = image.innerHTML;
-                console.log(img + "click");
-            });
-
+            img.src = image.value;
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0);
+                ctx.fillText(text.value, x.value, y.value);
+                ctx.font = `${font.value}px serif`;
+            }
+        });
     </script>
 </body>
+
 </html>
