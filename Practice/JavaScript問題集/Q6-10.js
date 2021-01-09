@@ -33,3 +33,22 @@
 // for (const [key, value] of Object.entries(obj)) {
 //     console.log(`${key}`, `${value}`);
 // }
+
+// Q.9
+// const array = ['a', 'b', 'c'];
+// console.log(array.join(""));
+
+// Q.10
+// x = 43;
+// let y = 3;
+
+// console.log(delete x);
+// console.log(delete y);
+
+// var array = [1, 2];
+// console.log(delete array[0]);
+// console.log(array);
+
+// 明示的に宣言した値はdeleteできない。
+// 配列の場合は該当する要素を削除、index番号は繰り上がったりしない。
+// Objectの中身を削除できる。Objectを削除できない。
