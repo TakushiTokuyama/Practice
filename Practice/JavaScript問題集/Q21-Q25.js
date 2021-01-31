@@ -99,3 +99,41 @@
 
 // var add5 = add4(1);
 // console.log(add5(2));
+
+function sum(x, y) {
+    return x + y;
+}
+
+console.log(sum(1, 2));
+
+function curried_sum(x) {
+    return function (y) { return sum(x, y); }
+}
+
+console.log(curried_sum(1)(2));
+
+function mean3(a, b, c) {
+    return a + b + c;
+}
+
+function curried_mean3(a) {
+    return function (b, c) { return mean3(a, b, c); }
+}
+
+console.log(mean3(1, 2, 3));
+console.log(curried_mean3(1)(2, 3));
+
+function greet(name) {
+    return function (greet) { return `${name}さん${greet}`; }
+}
+
+// 第1引数共通化
+console.log(greet("TOKU")("hello"));
+console.log(greet("TOKU")("goodmornig"));
+console.log(greet("TOKU")("goodafternoon"));
+
+// sortArray
+
+function sortArray(array){
+    return function()
+}
