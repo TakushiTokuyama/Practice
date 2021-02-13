@@ -64,14 +64,3 @@
 //     x: { writable: true, configurable: true, enumerable: true, value: 2 },
 //     y: { writable: true, configurable: true, enumerable: true, value: 3 }
 // });
-
-function Juice(name, con) {
-    this.name = name;
-    this.con = con;
-    this.concentration = function () {
-        console.log(con + name + 'juice');
-    }
-}
-
-var appleJuice = new Juice('apple', '100%');
-appleJuice.concentration();
