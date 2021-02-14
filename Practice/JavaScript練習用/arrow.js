@@ -33,15 +33,15 @@ const colors = [
 // }
 
 // 引数の合計値を返却
-// function sum() {
-//     var total = 0;
-//     for (var i = 0; i < arguments.length; i++) {
-//         total += arguments[i];
-//     }
-//     return console.log(total);
-// }
+function sum() {
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return console.log(total);
+}
 
-// sum(1, 2);
+sum(1, 2);
 
 // アロ―関数にリファクタリング
 
