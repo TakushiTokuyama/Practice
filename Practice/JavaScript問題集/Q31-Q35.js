@@ -46,7 +46,20 @@
 // console.log(arr2);
 
 // Q35
-const getSum = (a, b) => a + b;
+// const getSum = (a, b) => {
+//     if (a === undefined || b === undefined) {
+//         throw 'parameter is not number';
+//     }
+//     return a + b;
+// }
 
+// console.log(getSum(1));
 
+// const isNotNumErr = function (message) {
+//     throw new Error(message);
+// }
+
+// const getSum = (a = isNotNumErr('a is not number'), b = isNotNumErr('b is not number')) => a + b;
+
+// console.log(getSum());
 
