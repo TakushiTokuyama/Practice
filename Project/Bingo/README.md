@@ -10,10 +10,10 @@ Bingoの結果表示
 
 ## 画像
 ### 1.初期表示画面  
-![bingo1](/image/bingo1.png)
+![bingo1](./image/bingo1.png)
 </br>  
 ### 2.途中画面
-![bingo2](/image/bingo2.png)  
+![bingo2](./image/bingo2.png)  
 </br>
 ### 3.結果画面
-![bingo3](/image/bingo3.png)
+![bingo3](./image/bingo3.png)

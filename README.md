@@ -1,18 +1,17 @@
-# <span style="color: blue; ">JavaScript</span>
-
-## <span style="color: blue; ">Project</span>
+# JavaScript
+## Project
 ### 作品集
-## <span style="color: blue; ">Node.js</span>
-## <span style="color: blue; ">Practice</span>
+## Node.js
+## Practice
 ### 動作確認や、試してみたいこと、問題集などなど  
 </br>
 
-## <span style="color: blue; ">React</span>
-## <span style="color: blue; ">Canvas</span>
+## React
+## Canvas
 ### 図形
 </br>
 
-## <span style="color: blue; ">Chart.js</span>
+## Chart.js
 ### グラフ
 </br>
 
