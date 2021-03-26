@@ -198,13 +198,28 @@
 //     ids: [1, 2]
 // }
 
-var datas = [{ id: 1, name: "a" }, { id: 1, name: "b" }];
+// var datas = [{ id: 1, name: "a" }, { id: 1, name: "b" }];
 
-var result = {};
+// var result = {};
 
-result[1] = datas[0];
-result[2] = datas[1];
-result[2]['id'] = 2;
-result['ids'] = [1, 2];
+// result[1] = datas[0];
+// result[2] = datas[1];
+// result[2]['id'] = 2;
+// result['ids'] = [1, 2];
 
-console.log(result);
+// console.log(result);
+
+function sample(num) {
+    return new Promise(function (resolve, reject) {
+        if (num >= 3) {
+            resolve(num);
+        } else {
+            reject("Failed");
+        }
+    });
+}
+
+sample(3).then(function (result) {
+    console.log(result);
+    return result + 3;
+});
