@@ -21,3 +21,31 @@
 // var result2 = reg.test(str2);
 // console.log(result1);
 // console.log(result2);
+
+// var str1 = 'It is an important problem';
+// var str2 = 'The important duty is not cheap'
+
+// Q54
+
+var hiragana = /[ぁ-ん]/;
+var hankakuKatakana = /[ｦ-ﾟ]/;
+
+console.log(hankakuKatakana.test("ｶﾀｶﾅ"));
+
+var katakana = /[ァ-ヶ]/;
+
+// Q55
+const str = '「ヤッホー！ヤッホー！」';
+
+var yaho1 = /(ヤッホー！)+/;
+
+var yaho2 = /(ヤッホー！){2,3}/;
+
+// Q56
+const ans = '彼はありがとうと言った';
+var Q1 = /(ありがとう|こんにちは｜さようなら)/;
+
+console.log(Q1.exec(ans));
+var Q2 = /ありがとう|こんにちは｜さようなら/;
+
+console.log(Q2.exec(ans));
