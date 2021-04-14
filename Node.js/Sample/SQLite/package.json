@@ -9,6 +9,7 @@
   "author": "Takushi Tokuyama",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "sqlite3": "^5.0.2"
   }
 }
