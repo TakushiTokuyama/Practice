@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <form method="POST" action="result.ejs">
-        <p>id:<input type="text" name="id"></p>
-        <p>password:<input type="text" name="password"></p>
-        <button type="submit">ログイン</button>
-    </form>
-    <p>message:<%= message%>%></p>
+    <p>id:<%=id %> password:<%=password %>
+    </p>
+    <p>id:<%=message %>
+    </p>
+    <a href="/">index</a>
 </body>
 
 </html>
