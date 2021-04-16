@@ -21,8 +21,14 @@ var error = function () {
     return ejs.render(fs.readFileSync('view/index.ejs', 'utf-8'), { message: "未入力です" });
 }
 
+// セミコロンあり
+// var semikoron = function () {
+//     return ejs.render(fs.readFileSync('view/index.ejs', 'utf-8'), { message: "「;」は入力できません" });
+// }
+
 // exports
 exports.index = index;
 exports.success = success;
 exports.failer = failer;
 exports.error = error;
+// exports.semikoron = semikoron;

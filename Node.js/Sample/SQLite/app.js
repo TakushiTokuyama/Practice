@@ -8,12 +8,14 @@ var index = function (res) {
 
 // result
 var result = function (req, res) {
-    var db = require("./settings/dbSetting").dbConnection();
-    console.info('dbconnection');
     var data = '';
     req.on('data', function (chunk) { data += chunk }).on('end', function () {
         var qsdata = qs.parse(data);
+        // var regix = /;+/;
+        var db = require("./settings/dbSetting").dbConnection();
+        console.info('dbconnection');
         db.serialize(() => {
+            //console.log(escape(qsdata.id));
             db.all(`SELECT * FROM User WHERE Id = ${qsdata.id} AND Password = ${qsdata.password}`, function (err, rows) {
                 if (rows === undefined) {
                     res.end(page.error());
