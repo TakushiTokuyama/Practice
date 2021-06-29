@@ -13,15 +13,34 @@ let currentMonth = currentTime.getMonth();
 // 月初
 let beginingOfTheMonth = new Date(currentYear, currentMonth, 1);
 
-// 月末
-let lastOfTheMonth = new Date(currentYear, currentMonth + 1, 0);
+// 月末の日
+let lastOfTheMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
 // 月初の曜日
 let beginingOfTheMonthDays = beginingOfTheMonth.getDay();
 
+// 1か月分の日にち
+let weeks = ["", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "",
+    "", "", "", "", "", "", ""];
 
-for (var i = 1; i <= 7 - beginingOfTheMonthDays; i++) {
-    currentWeek[beginingOfTheMonthDays - 1 + i] = i;
+// 日数を格納
+for (var i = 1; i < lastOfTheMonth + 1; i++) {
+    weeks[beginingOfTheMonthDays - 1 + i] = i;
 }
-console.log(currentWeek);
+
+let weekly = [];
+let week = [];
+
+// 6weekに分割
+for (var x = 0; x < 42; x++) {
+    week.push(weeks[x]);
+    if (week.length % 7 === 0) {
+        weekly.push(week);
+        week = [];
+    }
+}
 
