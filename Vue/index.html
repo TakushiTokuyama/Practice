@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="app">
-        {{message}}
+        {{message === 1 ? 5 : 3 }}
     </div>
 
     <div id="app-2">
@@ -35,6 +35,29 @@
     <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
+      </div>
+
+      <div id="app-7">
+        <ol>
+            <todo-item 
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id">
+        </todo-item>
+        </ol>
+      </div>
+
+      <div id="app-8">
+        <p>{{increment(11)}}</p>
+      </div>
+
+      <div id="example">
+          <p>{{message}}</p>
+          <p>{{reversedMessage}}</p>
+      </div>
+
+      <div id="demo">
+          {{fullName = "john smis"}}
       </div>
 <script src="index.js"></script>
 </body>
