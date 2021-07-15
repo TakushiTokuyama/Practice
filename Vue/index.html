@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>Vue</title>
 </head>
+
 <body>
     <div id="app">
         {{message === 1 ? 5 : 3 }}
@@ -35,30 +37,69 @@
     <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
-      </div>
+    </div>
 
-      <div id="app-7">
+    <div id="app-7">
         <ol>
-            <todo-item 
-            v-for="item in groceryList"
-            v-bind:todo="item"
-            v-bind:key="item.id">
-        </todo-item>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+            </todo-item>
         </ol>
-      </div>
+    </div>
 
-      <div id="app-8">
+    <div id="app-8">
         <p>{{increment(11)}}</p>
-      </div>
+    </div>
 
-      <div id="example">
-          <p>{{message}}</p>
-          <p>{{reversedMessage}}</p>
-      </div>
+    <div id="example">
+        <p>{{message}}</p>
+        <p>{{reversedMessage}}</p>
+    </div>
 
-      <div id="demo">
-          {{fullName = "john smis"}}
-      </div>
-<script src="index.js"></script>
+    <div id="demo">
+        {{fullName = "john smis"}}
+    </div>
+
+    <div id="app-9">
+        <div v-bind:class="classObject">text</div>
+    </div>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+
+    <div id="app-10">
+        <template v-if="loginType === 'username'">
+            <label>username</label>
+            <input placeholder="Enter your name">
+        </template>
+        <template v-if="loginType === 'email'">
+            <label>email</label>
+            <input placeholder="Enter your email address">
+        </template>
+        <button v-on:click="changeType">type change</button>
+    </div>
+
+    <ul id="example-1">
+        <li v-for="(item) in items">
+            {{item.message}}
+        </li>
+    </ul>
+
+    <ul id="v-for-object">
+        <li v-for="(key, value) in object">
+            {{key}} : {{value}}
+        </li>
+    </ul>
+
+    <ul id="fil">
+        <li v-for="n in evenNumbers">
+            {{n}}
+        </li>
+    </ul>
+
+
+    <script src="index.js"></script>
 </body>
+
 </html>
