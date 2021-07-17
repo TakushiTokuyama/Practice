@@ -98,6 +98,23 @@
         </li>
     </ul>
 
+    <div id="fil2">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <ul v-for="set in sets">
+            <li v-for="n in even(set)">
+                {{n}}
+            </li>
+        </ul>
+    </div>
+
+    <div id="blog_post_demo">
+        <blog-post 
+        v-for="post in posts" 
+        v-bind:id="post.id" 
+        v-bind:post="post">
+        </blog-post>
+    </div>
 
     <script src="index.js"></script>
 </body>
